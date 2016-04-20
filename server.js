@@ -34,6 +34,6 @@ app.use("/",router);  //Tells Express to Use the routes we defined above.
 //});
 
 app.listen(port,ip,function(){  //Listen on port 3000
-    console.log((new Date()) " Listening on " + ip + ", server_port " + port; 
+    console.log((new Date()) + " Listening on " + ip + ", server_port " + port); 
     //console.log("Live at Port 3000");
 });
