@@ -6,7 +6,7 @@ var app = express();
 var router = express.Router();  //Built in middle layer routing server provided by ExpressJS
 var path = __dirname + '/views/';  //__dirname points to current directory
                                     //Views store HTML. Used in Router.get call
-var port = process.env.port || 3000;  //process.env.port uses default port on azure
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;  //uses default port on Openshift, or 3000 locally
 
 router.use(function (req,res,next) {
   console.log("/" + req.method);  //Log to console.
