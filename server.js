@@ -5,7 +5,8 @@ var express = require("express");
 var app = express();  
 var router = express.Router();  //Built in middle layer routing server provided by ExpressJS
 var path = __dirname + '/views/';  //__dirname points to current directory
-                                   //Views store HTML. Used in Router.get call
+                                    //Views store HTML. Used in Router.get call
+var port = process.env.port || 3000;  //process.env.port uses default port on azure
 
 router.use(function (req,res,next) {
   console.log("/" + req.method);  //Log to console.
@@ -31,6 +32,6 @@ app.use("/",router);  //Tells Express to Use the routes we defined above.
 //  res.sendFile(path + "404.html");  //This will execute and host a 404 page.
 //});
 
-app.listen(3000,function(){  //Listen on port 3000
+app.listen(port,function(){  //Listen on port 3000
   console.log("Live at Port 3000");
 });
