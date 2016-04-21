@@ -33,7 +33,7 @@ app.use("/",router);  //Tells Express to Use the routes we defined above.
 //  res.sendFile(path + "404.html");  //This will execute and host a 404 page.
 //});
 
-app.listen(port,ip,function(){  //Listen on port 3000
+app.listen(port,function(){  //Listen on port 3000
     console.log((new Date()) + " Listening on " + ip + ", server_port " + port); 
     //console.log("Live at Port 3000");
 });
